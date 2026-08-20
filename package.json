@@ -1,21 +1,25 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "description": "Learning backend",
-  "keywords": [
-    "javascript",
-    "backend",
-    "learning"
-  ],
-  "license": "ISC",
-  "author": "Kshitij",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "dev": "nodemon src/index.js"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.14",
-    "prettier": "^3.9.6"
-  }
+   "name": "backend",
+   "version": "1.0.0",
+   "description": "Learning backend",
+   "keywords": [
+      "javascript",
+      "backend",
+      "learning"
+   ],
+   "license": "ISC",
+   "author": "Kshitij",
+   "type": "module",
+   "main": "index.js",
+   "scripts": {
+      "dev": "nodemon -r dotenv/config -r ./src/dns-config.js --experimental-json-modules src/index.js"
+   },
+   "devDependencies": {
+      "nodemon": "^3.1.14",
+      "prettier": "^3.9.6"
+   },
+   "dependencies": {
+      "dotenv": "^17.4.2",
+      "mongoose": "^9.9.3"
+   }
 }
