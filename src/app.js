@@ -25,4 +25,12 @@ import userRouter from "./routes/user.routes.js";
 
 app.use("/api/v1/users", userRouter);
 
+app.use((err, req, res, next) => {
+   res.status(err.statusCode || 500).json({
+      success: err.success || false,
+      message: err.message || "Internal Server Error",
+      errors: err.errors || [],
+   });
+});
+
 export { app };
